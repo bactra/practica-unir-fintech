@@ -11,3 +11,29 @@ Los comandos del Makefile funcionarán en Linux y MacOS. En caso de usar Windows
 python3 main.py <filename> <dup>
   filename: **ruta** al fichero que contiene la lista de palabras, una por línea
   dup: **yes|no**, yes para eliminar palabras duplicadas, no para mantener la lista
+
+### Ejemplo de ejecución
+
+Con un fichero `words.txt` que contiene:
+
+```text
+pear
+apple
+pear
+```
+
+Ejecuta la aplicación manteniendo las palabras duplicadas:
+
+```console
+$ python3 main.py words.txt no
+Se leerán las palabras del fichero words.txt
+['apple', 'pear', 'pear']
+```
+
+Para eliminar los duplicados, usa `yes` como segundo argumento:
+
+```console
+$ python3 main.py words.txt yes
+Se leerán las palabras del fichero words.txt
+['apple', 'pear']
+```
